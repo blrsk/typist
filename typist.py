@@ -37,10 +37,6 @@ def fib(n):
 ]
 
 
-# UNIX SCRIPT TO CLEAR SCREEN
-def clear_screen():
-	subprocess.call('clear', shell=True)
-
 
 # RUNS PROGRAM
 def main():
@@ -53,9 +49,18 @@ def main():
 	return 0
 
 
+
+# UNIX SCRIPT TO CLEAR SCREEN
+def clear_screen():
+	subprocess.call('clear', shell=True)
+
+
+
+
+
 # PROMPT INPUT
 def prompt_input():
-	user_input = raw_input("\nType: ")
+	user_input = raw_input("\nType:\n")
 	return user_input
 
 # MATCH COMMANDS TO FUNCTIONS
@@ -63,7 +68,6 @@ def execute_command(command):
 	if command == 'quit':
 		return False
 	else:
-		loop = True
 		if command == 'commands':
 			print "\nList of commands:"
 			for c in commands:
@@ -76,7 +80,7 @@ def execute_command(command):
 		else:
 			print "\nThis command does not match. Try again or press 'commands' for all available commands."
 			prompt_input()
-		return loop
+		return True
 
 
 # COMMAND 'START'
@@ -88,8 +92,7 @@ def start():
 		new_exercise(val)
 
 # ITERATE EXERCISE
-def new_exercise(new_string):
-	original_str = new_string
+def new_exercise(original_str):
 	print original_str
 	regex_check(original_str)
 
