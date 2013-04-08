@@ -1,7 +1,6 @@
 #!/Users/abalaresque/Desktop/typist/venv/bin/python
 import sys
 import subprocess
-import re
 import time
 from termcolor import colored, cprint
 
@@ -277,10 +276,7 @@ def execute_command(command):
 			workout()
 		else:
 			print "\nThis command does not match. Try again or press 'commands' for all available commands."
-<<<<<<< HEAD
 			prompt_input()
-=======
->>>>>>> 17f0ae714315d99f7ff241e27cf674dc168df6aa
 		return True
 
 
@@ -323,15 +319,10 @@ def workout():
 	print "You are done."
 
 # ITERATE EXERCISE
-<<<<<<< HEAD
-def new_exercise(original_str):
-	print original_str
-=======
 def new_exercise(new_string):
 	original_str = new_string
 	print '\n'
 	print "Try that:\n" + original_str
->>>>>>> 17f0ae714315d99f7ff241e27cf674dc168df6aa
 	regex_check(original_str)
 
 # CHECK USER INPUT CHAR BY CHAR
